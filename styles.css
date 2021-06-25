@@ -348,6 +348,17 @@ footer {
     text-align: center;
 }
 
+.contacto {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.form {
+    max-width: 100%;
+    text-align: center;
+}
+
 @media (max-width: 720px) {
     header label {
         display: block;
