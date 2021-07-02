@@ -9,15 +9,19 @@
 body {
     /* margin: 0;
     padding: 0%; */
-    /* height: 100vh; */
+    /* height: 100vh;
+    width: 1360px; */
+    /* display: inline-block; */
+    /* padding: 0 10rem; */
     font-family: 'Raleway', sans-serif;
     background-color: rgb(255, 255, 255);
 }
 
 header {
-    width: 100%;
+    max-width: 100%;
     background: rgb(255, 255, 255);
     border-bottom: 2px rgb(0, 166, 243) solid;
+    padding: 0 5rem;
 }
 
 #btn-menu {
@@ -101,8 +105,7 @@ h2 {
     color: rgb(0, 166, 243);
 }
 
-.productos{
-
+.productos {
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -114,8 +117,110 @@ h2 {
     color: white;
 }
 
-.producto-item1, .producto-item2, .producto-item3, .producto-item4 {
+.productos-all {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 10rem;
+    text-align: center;
+}
+
+.productos-all a {
+    display: inline-block;
+}
+
+.producto-item1, .producto-item2, .producto-item3, .producto-item4, .producto-item5, .producto-item6, .producto-item7 {
     margin: 1rem;
+}
+
+.producto-item1 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.producto-item1:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
+}
+
+.producto-item2 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.producto-item2:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
+}
+
+.producto-item3 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.producto-item3:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
+}
+
+.producto-item4 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.producto-item4:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
+}
+
+.producto-item5 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.producto-item5:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
+}
+
+.producto-item6 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.producto-item6:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
+}
+
+.producto-item7 {
+    width: 200px;
+    height: 250px;
+    background-image: url(/img/prod7.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.4s;
+}
+
+.producto-item7:hover {
+    box-shadow: inset 0px -4px rgb(0, 153, 255);
 }
 
 .producto-item1 h3 {
@@ -357,6 +462,55 @@ footer {
 .form {
     max-width: 100%;
     text-align: center;
+}
+
+.aliados {
+    max-width: 100%;
+    background: rgb(0, 166, 243);
+    padding: 1rem 10rem;
+    text-align: center;
+}
+
+.aliados img {
+    width: 160px;
+    height: 160px;
+    margin: 1rem;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.aliados img:hover {
+    box-shadow: 0 0 10px 2px white;
+}
+
+.proyectos-all {
+    max-width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 1rem 10rem;
+    text-align: center;
+}
+
+.proyectos-all img {
+    width: 240px;
+    height: 240px;
+    margin: 1rem;
+    border-radius: 50%;
+    transition: all 0.6s;
+}
+
+.proyectos-all img:hover {
+    transform: scale(1.2);
+}
+
+.premios {
+    max-width: 100%;
+    height: auto;
+    background: rgb(0, 166, 243);
+    text-align: center;
+}
+
+.premios img {
+    width: 250px;
 }
 
 @media (max-width: 720px) {
