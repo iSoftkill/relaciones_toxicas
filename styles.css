@@ -19,13 +19,23 @@ body {
 
 header {
     max-width: 100%;
+    height: 6rem;
     background: rgb(255, 255, 255);
-    border-bottom: 2px rgb(0, 166, 243) solid;
+    border-bottom: 2px rgb(255, 60, 125) solid;
     padding: 0 5rem;
+}
+
+.logo {
+    width: 30%;
+    height: 4rem;
+    padding-top: 0.5rem;
+    box-sizing: border-box;
+    float: left;
 }
 
 #btn-menu {
     display: none;
+    padding-top: 30px;
 }
 
 header label {
@@ -33,6 +43,7 @@ header label {
     width: 30px;
     height: 30px;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 header label img {
@@ -50,8 +61,10 @@ header label img:hover {
 }
 
 .menu {
+    max-height: 4rem;
+    padding-top: 20px;
     font-weight: 600;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .menu ul {
@@ -65,26 +78,37 @@ header label img:hover {
 .menu li {
     /* text-align: center;
     flex-grow: 1; */
+    border-radius: 2rem;
     transition: all 0.5s;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .menu li:hover {
     color: white;
-    background: rgb(0, 166, 243);
+    background: rgb(255, 60, 125);
     /* font-size: 1.05rem; */
 }
 
 .menu li a {
     display: block;
     padding: 15px 20px;
-    color: rgb(0, 166, 243);
+    color: rgb(255, 60, 125);
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .menu li a:hover {
     color: white;
+}
+
+.ayuda {
+    color: white;
+    background: rgb(255, 60, 125);
+    border-radius: 2rem;
+}
+
+.ayuda a {
+    color: white !important;
 }
 
 /* main {
@@ -102,7 +126,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
-    color: rgb(0, 166, 243);
+    color: rgb(255, 60, 125);
 }
 
 .productos {
@@ -142,7 +166,7 @@ h2 {
 }
 
 .producto-item1:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item2 {
@@ -155,7 +179,7 @@ h2 {
 }
 
 .producto-item2:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item3 {
@@ -168,7 +192,7 @@ h2 {
 }
 
 .producto-item3:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item4 {
@@ -181,7 +205,7 @@ h2 {
 }
 
 .producto-item4:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item5 {
@@ -194,7 +218,7 @@ h2 {
 }
 
 .producto-item5:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item6 {
@@ -207,7 +231,7 @@ h2 {
 }
 
 .producto-item6:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item7 {
@@ -220,7 +244,7 @@ h2 {
 }
 
 .producto-item7:hover {
-    box-shadow: inset 0px -4px rgb(0, 153, 255);
+    box-shadow: inset 0px -4px rgb(255, 60, 125);
 }
 
 .producto-item1 h3 {
@@ -298,9 +322,23 @@ h2 {
     transition: all 600ms;
 }
 
+.container-ayuda {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
 .container-all:target {
-    /* display: flex; */
     background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-ayuda:target {
     visibility: visible;
     opacity: 1;
 }
@@ -317,7 +355,59 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 40rem 40rem rgba(0, 0, 0, 0.5);
+}
+
+.container-ayuda .popup {
+    width: 100%;
+    max-width: 300px !important;
+    height: 400px !important;
+    border-radius: 30px 0 30px 30px;
+    text-align: center !important;
+    position: fixed;
+    background: white;
+    display: block !important;
+    box-sizing: border-box !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-shadow: 0 0 30px 5px rgb(56, 56, 56);
+}
+
+.container-ayuda .popup .titulo-ayuda {
+    margin: auto;
+    padding-top: 10px;
+    border-bottom: 2px white solid;
+    display: block;
+    height: 20% !important;
+    text-align: center;
+}
+
+.container-ayuda .popup a img {
+    margin-top: 2rem;
+    display: inline-block;
+    height: 120px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.container-ayuda .popup a img:hover {
+    border-bottom: 1rem white solid;
+}
+
+.container-ayuda .popup {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    border-radius: 30px 0 30px 30px;
+    text-align: left;
+    position: fixed;
+    background: rgb(255, 60, 125);;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40rem 40rem rgba(0, 0, 0, 0.5);
 }
 
 .img-1 {
@@ -348,6 +438,22 @@ h2 {
     width: 40%;
     border-radius: 30px 0 0 30px;
     background-image: url(/img/produc4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-5 {
+    width: 40%;
+    border-radius: 30px 0 0 30px;
+    background-image: url(/img/produc5.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-6 {
+    width: 40%;
+    border-radius: 30px 0 0 30px;
+    background-image: url(/img/produc6.png);
     background-size: cover;
     background-position: center;
 }
@@ -386,7 +492,7 @@ h2 {
     text-align: center;
     max-width: 100%;
     margin-top: 10px;
-    background: rgb(0, 166, 243);
+    background: rgb(255, 60, 125);
 }
 
 .part3 img {
@@ -404,7 +510,7 @@ footer {
     align-items: center;
     height: 50px;
     text-align: center;
-    border-top: 2px rgb(0, 166, 243) solid;
+    border-top: 2px rgb(255, 60, 125) solid;
 }
 
 .red {
@@ -415,8 +521,8 @@ footer {
 
 .nosotros {
     margin: 0 4rem 2rem 4rem;
-    padding: 2rem;
-    background: rgb(0, 166, 243);
+    padding: 2rem 6rem;
+    background: rgb(255, 60, 125);
     border-radius: 30px;
 }
 
@@ -426,12 +532,12 @@ footer {
 }
 
 .nosotros p {
-    color: rgb(29, 29, 29);
+    color: rgb(245, 245, 245);
     margin-bottom: 16px;
 }
 
 .nosotros ul {
-    color: rgb(29, 29, 29);
+    color: rgb(245, 245, 245);
     margin-bottom: 16px;
 }
 
@@ -466,8 +572,8 @@ footer {
 
 .aliados {
     max-width: 100%;
-    background: rgb(0, 166, 243);
-    padding: 1rem 10rem;
+    background: rgb(255, 60, 125);
+    padding: 2rem 10rem;
     text-align: center;
 }
 
@@ -486,7 +592,7 @@ footer {
 .proyectos-all {
     max-width: 100%;
     background: rgb(255, 255, 255);
-    padding: 1rem 10rem;
+    padding: 2rem 10rem;
     text-align: center;
 }
 
@@ -504,8 +610,9 @@ footer {
 
 .premios {
     max-width: 100%;
+    padding: 2rem 0;
     height: auto;
-    background: rgb(0, 166, 243);
+    background: rgb(255, 60, 125);
     text-align: center;
 }
 
@@ -513,7 +620,22 @@ footer {
     width: 250px;
 }
 
+@media (max-width: 890px) {
+    .logo {
+        max-width: 70%;
+        opacity: 0;
+    }
+
+    .nosotros {
+        margin: 0 4rem 2rem 4rem;
+        padding: 2rem;
+        background: rgb(255, 60, 125);
+        border-radius: 30px;
+    }
+}
+
 @media (max-width: 720px) {
+
     header label {
         display: block;
         z-index: 0;
@@ -522,12 +644,23 @@ footer {
     .menu {
         /* z-index: 0; */
         position: absolute;
-        background: rgb(27, 27, 27);
+        /* background: rgb(255, 60, 125); */
         width: 30%;
         margin-left: -70%;
         transition: all 0.5s;
         /* z-index: -1; */
     }
+
+    .menu li {
+        background: rgb(255, 142, 142);
+        color: white;
+        border-radius: 0;
+    }
+
+    .menu ul li a {
+        color: white;
+    }
+
 
     .menu ul {
         flex-direction: column;
